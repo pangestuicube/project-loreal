@@ -16,3 +16,7 @@ Submit Login Form
 
 Success Login Validation
     Wait Until Element Is Visible    locator=${ProfileNavMenu}    timeout=${timeOutMedium}
+
+login Fail Validation
+    Sleep    5
+    Element Should Not Be Visible    locator=${ProfileNavMenu}
