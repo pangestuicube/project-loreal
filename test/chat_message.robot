@@ -15,3 +15,7 @@ Test Teardown       End Test Case
 TC009.Successfully Show All Listed Customer Message
     login_page.User Login
     chat_message_page.Go To List Message Page
+
+TC017.Successfully Show All Blasted Messages
+    login_page.User Login
+    chat_message_page.Go To Blast Message Page
