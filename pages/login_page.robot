@@ -1,8 +1,10 @@
 *** Settings ***
 Library         SeleniumLibrary
-Variables    ../resources/locators/login_page.py
-Variables    ../resources/data/testdata.py
-Variables    ../resources/locators/base_page.py
+Variables       ../resources/locators/login_page.py
+Variables       ../resources/data/testdata.py
+Variables       ../resources/locators/base_page.py
+
+
 *** Keywords ***
 Input Form Login
     [Arguments]    ${Username}    ${Password}
@@ -20,3 +22,8 @@ Success Login Validation
 login Fail Validation
     Sleep    5
     Element Should Not Be Visible    locator=${ProfileNavMenu}
+
+User Login
+    Input Form Login    Username=${LoginUsername}    Password=${LoginPassword}
+    Submit Login Form
+    Success Login Validation
